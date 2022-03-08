@@ -2,6 +2,6 @@ version: '3.8'
 
 services:
   multi-modules:
-    image: app:0.0.1-SNAPSHOT
+    image: app:0.0.2-SNAPSHOT
     ports:
       - 8070:8080
