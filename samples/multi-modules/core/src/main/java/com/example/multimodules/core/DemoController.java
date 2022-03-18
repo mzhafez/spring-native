@@ -10,9 +10,8 @@ import org.springframework.nativex.hint.NativeHint;
 import org.springframework.nativex.hint.TypeHint;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityHints;
-import org.springframework.security.config.annotation.web.CommonSecurityResources;
-import org.springframework.security.config.annotation.web.CommonSecurityTypes;
 import org.springframework.security.config.annotation.web.configuration.WebMvcSecurityHints;
+import org.springframework.security.core.CoreSecurityHints;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,7 +35,7 @@ import static org.springframework.nativex.hint.TypeAccess.QUERY_PUBLIC_METHODS;
 @RequestMapping ("/")
 @NativeHint (trigger = DemoController.class,
              imports = { ValidatorHints.class, GlobalMethodSecurityHints.class, WebMvcSecurityHints.class,
-                     CommonSecurityTypes.class, CommonSecurityResources.class, ConfigServerHints.class,
+                     CoreSecurityHints.class, ConfigServerHints.class,
                      WebAnnotationHints.class, EndpointAutoConfigurationHints.class }, types = {
         @TypeHint (types = { DemoController.class },
                    access = { DECLARED_CONSTRUCTORS, DECLARED_FIELDS, DECLARED_METHODS, PUBLIC_CLASSES,
